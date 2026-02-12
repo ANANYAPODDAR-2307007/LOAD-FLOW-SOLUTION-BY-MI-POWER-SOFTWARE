@@ -1,0 +1,330 @@
+-------------------------------------------------------------------------------
+Date and Time : Thu Feb 12 17:20:04 2026
+-------------------------------------------------------------------------------
+       LOAD FLOW BY NEWTON RAPHSON METHOD
+CASE NO :  1     CONTINGENCY  : 0  SCHEDULE NO : 0
+CONTINGENCY NAME : Base Case 	 RATING CONSIDERED : NOMINAL 
+
+-------------------------------------------------------------------------------
+VERSION NUMBER :  8.2
+%% First Power System Network 
+Largest Bus Number Used        :    5
+Actual Number of Buses         :    5
+Number of 2 Wind. Transformers :    0    Number of 3 Wind. Transformers :    0
+Number of Transmission Lines   :    7    Number of Series Reactors      :    0
+Number of Series Capacitors    :    0    Number of Circuit Breakers     :    0
+Number of Shunt Reactors       :    0    Number of Shunt Capacitors     :    0
+Number of Shunt Impedances     :    0    Number of Generators           :    2
+Number of Loads                :    4    Number of Load Characteristics :    0
+Number of Under Frequency Relay:    0    Number of Gen.Capability Curves:    0
+Number of Filters              :    0    Number of Tie Line Schedules   :    0
+Number of Convertors           :    0    Number of dc Links             :    0
+Number of Shunt Connected Facts:    0    Power Forced Lines             :    0
+Number of TCSC Connected       :    0    Number of SPS Connected        :    0
+Number of UPFC Connected       :    0    Number of Wind Generators      :    0
+Number of wtg Curves           :    0    Number of wtg Detailed Curves  :    0
+Number of solar plants         :    0
+-------------------------------------------------------------------------------
+Load Flow With Newton Raphson Method            :    6 
+Number of Zones                                 :    1 
+Print Option                                    :    3 - Both Data and Results Print
+Plot Option                                     :    1 - Plotting with p.u. Voltage  
+No Frequency Dependent Load Flow, Control Option:    0 
+Base MVA                                        :  100.0
+Nominal System Frequency (Hz)                   :   50.0
+Frequency Deviation (Hz)                        :    0.0
+Flows in MW and MVAr, Option                    :    0
+Slack Bus                                       :    0 (Max. Generation Bus) 
+Transformer Tap Control Option                  :    0 
+Q Checking Limit  (Enabled)                     :    4 
+Real Power Tolerance (p.u.)                     :    0.00100 
+Reactive Power Tolerance (p.u.)                 :    0.00100 
+Maximum Number of Iterations                    :   15 
+Bus Voltage Below Which Load Model is Changed   :    0.75000 
+Circuit Breaker Resistance  (p.u.)              :    0.00000 
+Circuit Breaker Reactance   (p.u.)              :    0.00010 
+Transformer R/X Ratio                           :    0.05000 
+------------------------------------------------------------------------------
+Annual Percentage Interest Charges              :   15.000
+Annual Percent Operation & Maintenance Charges  :    4.000
+Life of Equipment in Years                      :   20.000
+Energy Unit Charge (KWH)                        :    2.500 Rs
+Loss Load Factor                                :    0.300
+Cost Per MVAr in Lakhs                          :    5.000 Rs
+-------------------------------------------------------------------------------
+ZONE WISE MULTIPLICATION FACTORS
+ZONE   P LOAD   Q LOAD    P GEN    Q GEN SH REACT   SH CAP   C LOAD
+---- -------- -------- -------- -------- -------- -------- --------
+   0    1.000    1.000    1.000    1.000    1.000    1.000    1.000
+   1    1.000    1.000    1.000    1.000    1.000    1.000    1.000
+-------------------------------------------------------------------------------
+BUS DATA 
+
+ BUS NO. AREA ZONE   BUS kV VMIN(p.u.) VMAX(p.u.)     NAME
+-------- ---- ---- -------- ---------- ---------- --------
+       1    1    1   11.000      0.950      1.050     Bus1
+       2    1    1   11.000      0.950      1.050     Bus2
+       3    1    1   11.000      0.950      1.050     Bus3
+       4    1    1   11.000      0.950      1.050     Bus4
+       5    1    1   11.000      0.950      1.050     Bus5
+
+-------------------------------------------------------------------------------
+TRANSMISSION LINE DATA 
+
+STA CKT     FROM     FROM       TO       TO         LINE PARAMETER        RATING    KMS  
+            NODE     NAME*    NODE     NAME*  R(p.u.)   X(p.u.) B/2(p.u.)    MVA       
+--- --- -------- -------- -------- -------- --------- --------- --------- ------ ------ 
+  3   1        1     Bus1        2     Bus2   0.06612   0.19835   0.03025      3   1.00
+  3   1        2     Bus2        3     Bus3   0.00826   0.02479   0.01210      3   1.00
+  3   1        1     Bus1        4     Bus4   0.01653   0.04959   0.03630      3   1.00
+  3   1        4     Bus4        2     Bus2   0.04959   0.14876   0.02420      3   1.00
+  3   1        4     Bus4        3     Bus3   0.04959   0.14876   0.02420      3   1.00
+  3   1        4     Bus4        5     Bus5   0.03306   0.09917   0.01815      3   1.00
+  3   1        5     Bus5        3     Bus3   0.06612   0.19835   0.03025      3   1.00
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+Total Line Charging Susceptance  (in p.u.)                   :    0.35090 
+Total Line Charging MVAr at 1 p.u. Voltage                   :   35.090 
+Number of Lines Opened on Both the Ends                      :    0
+Total Line Charging susceptance of Existing Lines (in p.u.)  :    0.35090  
+Total Line Charging MVAr at 1 p.u. Voltage of Existing Lines :   35.090 
+-------------------------------------------------------------------------------
+Total Capacitive Susceptance          :    0.00000 p.u. -    0.000 MVAr
+Total Inductive Susceptance           :    0.00000 p.u. -    0.000 MVAr
+
+-------------------------------------------------------------------------------
+GENERATOR DATA  
+
+Sl.No*     FROM     FROM      REAL     Q-MIN     Q-MAX    V-SPEC CAP.     MVA STAT
+           NODE     NAME*POWER(MW)      MVAr      MVAr      p.u. CURV  RATING 
+------ -------- -------- --------- --------- --------- --------- ---- ------- ----
+     1        1     Bus1  100.0000    0.0000    0.0000    1.0000    0  100.00    3
+     2        4     Bus4   45.0000    0.0000    0.0000    1.0000    0   45.00    3
+
+-------------------------------------------------------------------------------
+LOAD DATA  
+
+Sl.No.     FROM     FROM     REAL REACTIVE     COMP COMPENSATING MVAR VALUE CHAR  F/V
+*          NODE     NAME*      MW     MVAr     MVAr     MIN     MAX    STEP  NO.  NO.
+                                                                            STAT 
+------ -------- -------- -------- -------- -------- ------- ------- ------- ---- ----
+     1        2     Bus2   45.000   15.000    0.000   0.000   0.000   0.000    0    0
+                                                                               3    0
+     2        4     Bus4   20.000  -20.000    0.000   0.000   0.000   0.000    0    0
+                                                                               3    0
+     3        5     Bus5   60.000   10.000    0.000   0.000   0.000   0.000    0    0
+                                                                               3    0
+     4        3     Bus3   40.000    5.000    0.000   0.000   0.000   0.000    0    0
+                                                                               3    0
+-------------------------------------------------------------------------------
+Total Specified MW Generation           :  145.00000 
+Total Minimum MVAr Limit of Generator   :    0.00000 
+TOTAL Maximum MVAr Limit of Generator   :    0.00000 
+Total Specified MW Load                 :  165.00000 Changed to  165.00000
+Total Specified MVAr Load               :   10.00000 Changed to   10.00000
+Total Specified MVAr Compensation       :    0.00000 Changed to    0.00000
+-------------------------------------------------------------------------------
+TOTAL (Including Out of Service Units)
+Total Specified MW Generation           :  145.00000 
+TOTAL Minimum MVAr Limit of Generator   :    0.00000 
+Total Maximum MVAr Limit of Generator   :    0.00000 
+Total Specified MW Load                 :  165.00000 Changed to  165.00000
+Total Specified MVAr Load               :   10.00000 Changed to   10.00000
+Total Specified MVAr Compensation       :    0.00000 Changed to    0.00000
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+GENERATOR DATA FOR FREQUENCY DEPENDENT LOAD FLOW 
+
+SLNO*      FROM     FROM   P-RATE     P-MIN     P-MAX    %DROOP   PARTICI      BIAS
+           NODE     NAME*      MW        MW        MW              FACTOR   SETTING
+                                                             C0        C1        C2
+------ -------- -------- -------- --------- --------- --------- --------- ---------
+     1        1     Bus1  100.000    0.0000  100.0000    4.0000    0.0000    0.0000
+                                                         0.0000    0.0000    0.0000
+     2        4     Bus4   45.000    0.0000   45.0000    4.0000    0.0000    0.0000
+                                                         0.0000    0.0000    0.0000
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+Slack bus angle (degrees) :   0.00
+-------------------------------------------------------------------------------
+TOTAL NUMBER OF ISLANDS IN THE GIVEN SYSTEM          :    1
+TOTAL NUMBER OF ISLANDS HAVING ATLEAST ONE GENERATOR :    1
+SLACK BUSES CONSIDERED FOR THE STUDY 
+ISLAND NO. SLACK BUS NAME     SPECIFIED MW
+---------- --------- -------- ------------
+         1         1     Bus1      100.000
+
+-------------------------------------------------------------------------------
+Iteration count 0 maxp 0.600000 maxq 0.083450 
+-------------------------------------------------------------------------------
+Iteration count 1 maxp 0.019446 maxq 0.020448 
+-------------------------------------------------------------------------------
+Iteration count 2 maxp 0.000052 maxq 0.000059 
+-------------------------------------------------------------------------------
+Iteration count 3 maxp 0.000000 maxq 0.000000 
+Iteration count 4 maxp 0.000000 maxq 0.213355 
+-------------------------------------------------------------------------------
+Iteration count 5 maxp 0.000182 maxq 0.002017 
+-------------------------------------------------------------------------------
+Iteration count 6 maxp 0.000000 maxq 0.000000 
+
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+BUS VOLTAGES AND POWERS 
+
+    NODE     FROM   V-MAG  ANGLE        MW     MVAr        MW     MVAr     MVAr 
+     NO.     NAME    p.u. DEGREE       GEN      GEN      LOAD     LOAD     COMP 
+-------- --------  ------ ------  -------- --------  -------- -------- -------- 
+       1     Bus1  1.0000   0.00   124.078  -11.573     0.000    0.000    0.000  <
+       2     Bus2  0.9708  -4.55     0.000    0.000    45.000   15.000    0.000   
+       3     Bus3  0.9704  -4.85     0.000    0.000    40.000    5.000    0.000   
+       4     Bus4  0.9909  -2.49    45.000    0.000    20.000  -20.000    0.000  >
+       5     Bus5  0.9656  -5.59     0.000    0.000    60.000   10.000    0.000   
+-------------------------------------------------------------------------------
+NUMBER OF BUSES EXCEEDING MINIMUM VOLTAGE LIMIT (@ mark) :    0 
+NUMBER OF BUSES EXCEEDING MAXIMUM VOLTAGE LIMIT (# mark) :    0 
+NUMBER OF GENERATORS EXCEEDING MINIMUM Q LIMIT (< mark)  :    1 
+NUMBER OF GENERATORS EXCEEDING MAXIMUM Q LIMIT (> mark)  :    1 
+
+-------------------------------------------------------------------------------
+LINE FLOWS AND LINE LOSSES 
+
+SLNO CS     FROM     FROM       TO       TO        FORWARD            LOSS          %
+            NODE     NAME     NODE     NAME       MW     MVAr       MW     MVAr LOADING
+---- -- -------- -------- -------- -------- -------- -------- -------- -------- -------
+   1  1        1     Bus1        2     Bus2   39.808   -0.047   1.0536  -2.7153  1141.8! 
+   2  1        2     Bus2        3     Bus3   18.446   -5.584   0.0316  -2.1852   569.4! 
+   3  1        1     Bus1        4     Bus4   84.269  -11.527   1.1841  -3.6422  2439.5! 
+   4  1        4     Bus4        2     Bus2   25.022    3.084   0.3312  -3.6634   756.2! 
+   5  1        4     Bus4        3     Bus3   28.186    2.441   0.4129  -3.4165   838.9! 
+   6  1        4     Bus4        5     Bus5   54.877    6.591   1.0375  -0.3622  1599.8! 
+   7  1        5     Bus5        3     Bus3   -6.160   -3.047   0.0269  -5.5885   204.1! 
+-------------------------------------------------------------------------------
+! NUMBER OF LINES LOADED BEYOND  125%          :    7
+@ NUMBER OF LINES LOADED BETWEEN 100% AND 125% :    0
+# NUMBER OF LINES LOADED BETWEEN  75% AND 100% :    0
+$ NUMBER OF LINES LOADED BETWEEN  50% AND  75% :    0
+^ NUMBER OF LINES LOADED BETWEEN  25% AND  50% :    0
+& NUMBER OF LINES LOADED BETWEEN   1% AND  25% :    0
+* NUMBER OF LINES LOADED BETWEEN   0% AND   1% :    0
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+BUSES BETWEEN WHICH ANGLE DIFFERENCE IS > 30 degrees ARE: ZERO
+-------------------------------------------------------------------------------
+ISLAND FREQUENCY SLACK-BUS   CONVERGED(1)
+------ --------- ----------- ------------
+     1  50.00000           1       1
+
+-------------------------------------------------------------------------------
+Summary of results
+TOTAL REAL POWER GENERATION (CONVENTIONAL)   :    169.078 MW 
+TOTAL REAL POWER INJECTION (-ve LOAD)        :      0.000 MW 
+TOTAL REACT. POWER GENERATION (CONVENTIONAL) :    -11.573 MVAr 
+GENERATION p.f.                              :      0.998
+
+TOTAL REAL POWER GENERATION (WIND)           :      0.000 MW 
+TOTAL REACT. POWER GENERATION (WIND)         :      0.000 MVAr 
+TOTAL REAL POWER GENERATION (SOLAR)          :      0.000 MW 
+TOTAL REACT. POWER GENERATION (SOLAR)        :      0.000 MVAr 
+TOTAL SHUNT REACTOR INJECTION                :     -0.000 MW 
+TOTAL SHUNT REACTOR INJECTION                :     -0.000 MVAr 
+
+TOTAL SHUNT CAPACIT.INJECTION                :     -0.000 MW 
+TOTAL SHUNT CAPACIT.INJECTION                :     -0.000 MVAr 
+
+TOTAL TCSC REACTIVE DRAWL                    :      0.000 MVAr 
+
+TOTAL SPS REACTIVE DRAWL                     :      0.000 MVAr 
+
+TOTAL UPFC INJECTION                         :     -0.000 MVAr
+
+TOTAL SHUNT FACTS INJECTION                  :      0.000 MVAr 
+TOTAL SHUNT FACTS DRAWAL                     :      0.000 MVAr 
+
+TOTAL REAL POWER LOAD                        :    165.000 MW 
+TOTAL REAL POWER DRAWAL (-ve gen.)           :      0.000 MW 
+TOTAL REACTIVE POWER LOAD                    :     10.000 MVAr 
+LOAD p.f.                                    :      0.998 
+TOTAL COMPENSATION AT LOADS                  :      0.000 MVAr 
+TOTAL HVDC REACTIVE POWER                    :      0.000 MVAr 
+
+TOTAL REAL POWER LOSS (AC+DC)                :   4.077798 MW (  4.077798+  0.000000)
+PERCENTAGE REAL  LOSS (AC+DC)                :      2.412                   
+TOTAL REACTIVE POWER  LOSS                   : -21.573307 MVAr 
+
+-------------------------------------------------------------------------------
+Zone wise distribution
+Description        Zone # 1 
+---------------- ---------- 
+MW generation      169.0778 
+
+MVAr generation    -11.5733 
+
+MW wind gen.        0.0000 
+
+MVAr wind gen.      0.0000 
+
+MW solar gen.        0.0000 
+
+MVAr solar gen.      0.0000 
+
+MW load            165.0000 
+
+MVAr load           10.0000 
+
+MVAr compensation    0.0000 
+
+MW loss              4.0778 
+
+MVAr loss          -21.5733 
+
+MVAr - inductive     0.0000 
+
+MVAr - capacitive    0.0000 
+
+-------------------------------------------------------------------------------
+Zone wise export(+ve)/import(-ve)
+Zone #   1 MW & MVAr      
+------ -------- -------- 
+     1       -----       
+
+-------------------------------------------------------------------------------
+Area wise export(+ve)/import(-ve)
+Area #   1 MW & MVAr      
+------ -------- -------- 
+     1       -----       
+
+-------------------------------------------------------------------------------
+Area wise distribution
+Description        Area # 1 
+---------------- ---------- 
+MW generation      169.0778 
+
+MVAr generation    -11.5733 
+
+MW wind gen.        0.0000 
+
+MVAr wind gen.      0.0000 
+
+MW solar gen.        0.0000 
+
+MVAr solar gen.      0.0000 
+
+MW load            165.0000 
+
+MVAr load           10.0000 
+
+MVAr compensation    0.0000 
+
+MW loss              4.0778 
+
+MVAr loss          -21.5733 
+
+MVAr - inductive     0.0000 
+
+MVAr - capacitive    0.0000 
+
+-------------------------------------------------------------------------------
+Date and Time : Thu Feb 12 17:20:04 2026
+-------------------------------------------------------------------------------
